@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+
+/* program from parents to children, style the body first */
+/* set the min and max width of the body first */
+/* min-height 100vh view height the whole screen view :) */
+/* margin:0 auto to center the body so even when the sceen is huge it will center the page */
+body {
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 120rem;
+    min-width: 32rem;
+    background-color: #b6deef;
+    display: flex;
+    justify-content: center;
+}
+
+
+header {
+    width: 80%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+
+}
+
+
+
+/* changing width to percentage  or vh this force them to wra much later*/
+/* transition to the item you to move ease-in-out and than the time in second .3 -.5 */
+
+.pricing_cards {
+    width: 30%;
+    min-width: 25rem;
+    min-height: 40rem;
+    background-color:#134256;
+    color: aliceblue;
+    border-radius: 0.4rem;
+    padding: 3rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in-out .3s;
+}
+
+
+/*  when do you want the animation and how do you want to transform it */
+.pricing_cards:hover {
+transform: scale(1.1);
+border: 2px solid white;
+
+}
+
+
+.card_title {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.card_price {
+    font-size: 3rem;
+    margin: 1rem;
+    color: #fbfb1e
+}
+
+.card_text {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card_btn {
+    min-width: 15rem;
+    height: 4rem;
+    background-color: #47acd6;
+    color:white;
+    font-weight: bold;
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: .8rem 2.5rem;
+    border-style: none;
+}
+
+
+
+.card_btn:hover{
+    background-color: #fbfb1e;
+    color:#134256 ;
+}
+
+/* center items to page as they got smaller  */
+@media all and  (max-width:108.3rem) {
+    header {
+        justify-content: center;
+    }
+    .pricing_cards {
+        width: 32%;
+    }
+
+
+}
+
+@media all and (max-width:50.8rem) {
+    .pricing_cards {
+        width: 50%;
+    }
+}
